@@ -1,37 +1,3 @@
----
-title: Construction Detection API
-emoji: 🏗️
-colorFrom: yellow
-colorTo: orange
-sdk: docker
-app_port: 7860
-pinned: true
----
-
-# Construction Detection API
-
-Detects construction elements (beam, column, door, floor, stairs, wall, window) and measures their dimensions.
-
-## API Endpoints
-
-| Endpoint | Method | Description |
-|---|---|---|
-| `/` | GET | API info |
-| `/health` | GET | Health check |
-| `/detect` | POST | Upload image → get detections |
-| `/calibrate` | POST | Set reference for real-world units |
-
-## Usage
-
-```python
-import requests
-
-r = requests.post(
-    "https://dipangshuborah-construction-detection-api.hf.space/detect",
-    files={"file": open("image.jpg", "rb")}
-)
-print(r.json())
-
 # 🏗️ Construction Element Detection API
 
 > AI-powered construction site detection with automatic dimension measurement using YOLOv8 fine-tuned model and ArUco marker calibration.
@@ -49,6 +15,16 @@ print(r.json())
 This project detects construction elements (columns, beams, walls, doors, windows, floors, stairs) from images and automatically measures their **width and height in centimeters** using an ArUco marker placed on a hard hat for scale calibration.
 
 **Live API:** `https://newtechdevng-construction-detection-api.hf.space`
+
+---
+
+## 📸 Detection in Action
+
+> Real construction site — columns detected with auto-calibrated dimensions via ArUco marker on hard hat
+
+![Detection Result](detection_result.png)
+
+*4 columns detected with real-world cm dimensions — ArUco marker auto-calibrated the scale*
 
 ---
 
@@ -301,4 +277,3 @@ MIT License — free to use and modify.
 - [Hugging Face Spaces](https://huggingface.co/spaces)
 - [OpenCV ArUco](https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html)
 - [FastAPI](https://fastapi.tiangolo.com)
-```
