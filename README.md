@@ -22,7 +22,7 @@ This project detects construction elements (columns, beams, walls, doors, window
 
 > Real construction site — columns detected with auto-calibrated dimensions via ArUco marker on hard hat
 
-![Detection Result](detection_result.png)
+![Detection Result](result_aruco.jpg)
 
 *4 columns detected with real-world cm dimensions — ArUco marker auto-calibrated the scale*
 
